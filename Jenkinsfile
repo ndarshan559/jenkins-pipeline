@@ -6,5 +6,15 @@ pipeline{
         echo "this is build stage"
       }
    }
- }
+ 
+    parallel {
+    stage ('TEST') {
+      echo " test 1 in parallel"
+    }
+    stage ('BUILD') {
+      echo "test 2 in parallel"
+    }
+    
+  }
+  }
 }
