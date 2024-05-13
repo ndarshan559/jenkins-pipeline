@@ -6,7 +6,7 @@ pipeline{
   stages {
     stage ('BUILD') {
       steps {
-        echo "this is build stage params.ENV"
+        echo "this is build stage $params.ENV"
       }
    }
 
